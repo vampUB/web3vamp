@@ -1,0 +1,21 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" rx="120" fill="#151833" />
+  <g filter="url(#glow)">
+    <path
+      d="M256 108c-82 0-148 66-148 148s66 148 148 148 148-66 148-148S338 108 256 108zm0 72a76 76 0 110 152 76 76 0 010-152z"
+      fill="#36E7FF"
+      opacity="0.9"
+    />
+    <path
+      d="M208 180h96l44 76-44 76h-96l-44-76 44-76z"
+      fill="#7B5BFF"
+      opacity="0.95"
+    />
+  </g>
+  <defs>
+    <filter id="glow" x="120" y="72" width="272" height="368" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feBlend in="SourceGraphic" in2="blur" mode="screen" />
+    </filter>
+  </defs>
+</svg>

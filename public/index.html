@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cosmo Runner Web3</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="https://unpkg.com/@tonconnect/ui@2.0.7/dist/tonconnect-ui.min.js"></script>
+  </head>
+  <body>
+    <div class="app">
+      <header class="top-bar">
+        <div class="brand">
+          <span class="emoji">🦾</span>
+          <h1>Cosmo Runner</h1>
+        </div>
+        <div id="ton-connect"></div>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="copy">
+            <h2>Беги по неону, держи комбо, властвуй над таблицей лидеров!</h2>
+            <p>
+              Прыжок — касание экрана. Двойной прыжок удерживает героя в воздухе.
+              Перекатывайся через порталы и избегай кристаллов, чтобы собирать серию
+              комбо и включать поток подсказок.
+            </p>
+            <button id="startButton" class="cta">Начать забег</button>
+          </div>
+          <div class="stats">
+            <div class="stat"><span id="score">0</span><label>Очки</label></div>
+            <div class="stat"><span id="combo">x1</span><label>Комбо</label></div>
+            <div class="stat"><span id="best">0</span><label>Рекорд</label></div>
+          </div>
+        </section>
+
+        <section class="game-wrapper">
+          <canvas id="gameCanvas" width="900" height="280"></canvas>
+          <div id="comboBanner" class="combo-banner hidden"></div>
+          <div id="leaderboard" class="leaderboard hidden"></div>
+        </section>
+      </main>
+
+      <footer>
+        <p>
+          Подключи кошелек TON, чтобы закрепить свой ник. Результаты сохраняются
+          прямо на сервере бота и делятся с друзьями в Telegram.
+        </p>
+      </footer>
+    </div>
+
+    <script type="module" src="game.js"></script>
+  </body>
+</html>
